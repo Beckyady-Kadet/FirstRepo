@@ -3,20 +3,20 @@
 
 // Data Collected and sent are represented in Json format. An example of Json format is represented below;
 
-var Student = {
-    'Fname': 'Precious Smith',
-    'Age': 30,
-    'Matric_No': 1123,
-    'Sex': "Female"
+const student = {
+    'full_name': 'Precious Smith',
+    'age': 30,
+    'matric_no': 1123,
+    'sex': "Female"
 }
 
 // Json format can also be represented as a String as shown below
 
-var Students = `{
-        "Fname": "Precious Smith",
-        "Age": 30,
-        "Matric_No": 1123,
-        "Sex": "Female",
+const student = `{
+        "full_name": "Precious Smith",
+        "age": 30,
+        "matric_no": 1123,
+        "sex": "Female",
         "courses": [
                     {
                         "code": "EEE223"
@@ -40,26 +40,26 @@ var Students = `{
 
 // To call the Age from the above Student data using dot annotation;
 
-const Age = Student.Age;
+const age = student.age;
 
 
 //To call the Matric No from the above Student data using the square bracket syntax;
 
-const Matric_No = Student['Matric_No']
+const matricNo = student['matric_no']
 
 
 // To call an item fron an Array;
 
-const title = Student.courses[2].title;
+const title = student.courses[2].title;
 
 // the output will be "Exponential numbers"
 
 // And we have function like JSON.stringify() whhich is used to convert an object to a JSON string.
 
-// The above student data can be converted into a toString as shown below
+// The above student data can be converted into a to String as shown below
 
-const Srt = JSON.stringify(Students);
+const studentString = JSON.stringify(student);
 
 // And once converted in to a string it can be changed back to Objects by using the function JSON.parse() as shown below
 
-var nStr = JSON.parse(Srt)
+const studentData = JSON.parse(studentString)
