@@ -48,3 +48,24 @@ userScore.push(
 )
 
 console.log(userScore)
+
+//or can use spread annotation
+const oldScore = [
+    {id: 1, name: 'Olarike', score: 34},  
+    {id: 2, name: 'Taiwo', score: 12},  
+    {id: 3, name: 'Kehinde', score: 27}
+]
+
+const newScore = [
+    {id: 5, name: 'wale', score: 34},  
+    {id: 6, name: 'wole', score: 12},  
+    {id: 4, name: 'bobby', score: 27}
+]
+
+const allScores = [...oldScore, ...newScore]
+console.log(allScores);
+
+//or you can concatenates the arrays together
+
+const allScore = oldScore.concat(newScore)
+console.log(allScore)

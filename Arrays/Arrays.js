@@ -25,7 +25,7 @@ colors.push("indigo");
 console.log(colors);
 
 // Replace the middle value with "red"
-colors.splice(1,1,"red")
+colors[Math.floor((colors.length - 1) /2)] = "red"
 console.log(colors)
 
 // Strip off the first value of the array
