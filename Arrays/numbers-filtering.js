@@ -29,9 +29,11 @@ console.log(userScore)
 
 // Loop through the array after sort and return the each user. Note your position should start at 1.
 
-for (index = 1; index < userScore.length; index++) { 
-    console.log(userScore[index]); 
-} 
+userScore.forEach((element, position) => {
+    element.position = position + 1;  
+   })
+   console.log(userScore); 
+
 
 // Sum the total score of the user in the array.
 
@@ -49,12 +51,12 @@ userScore.push(
 
 console.log(userScore)
 
-//or can use spread annotation
-const oldScore = [
+//or concatenate the arrays together 
+
+const oldScore = [  
     {id: 1, name: 'Olarike', score: 34},  
     {id: 2, name: 'Taiwo', score: 12},  
-    {id: 3, name: 'Kehinde', score: 27}
-]
+    {id: 3, name: 'Kehinde', score: 27} ];
 
 const newScore = [
     {id: 5, name: 'wale', score: 34},  
