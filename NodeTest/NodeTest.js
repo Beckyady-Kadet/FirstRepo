@@ -7,7 +7,9 @@ const port = process.env.PORT || 8000;
 
 
 //Call the route here from the external file
-let routes = require ('./Route')(app);
+const routes = require ('./Route');
+
+routes(app);
 
 //make the server listen to request
 app.listen(port, () =>{
